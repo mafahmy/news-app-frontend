@@ -10,7 +10,7 @@ import useSlider from './useSlider';
  * @returns JSX.Element
  */
 const NewsImagesSlider = () => {
-  // Destructure values from useSlider hook
+  // Destructure values from useSlider hook:
   const [
     index, // Current index in the slider
     handleNextClick, // Function to go to the next slide
