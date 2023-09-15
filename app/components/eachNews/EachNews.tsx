@@ -1,7 +1,7 @@
 interface Props {
   oneNewsData: SliderNews;
 }
-const NewsImage = ({ oneNewsData }: Props) => {
+const EachNews = ({ oneNewsData }: Props) => {
   return (
     <article
       className='w-[300px] flex items-end rounded-xl'
@@ -13,13 +13,15 @@ const NewsImage = ({ oneNewsData }: Props) => {
       }}
     >
       <section className='h-2/3 flex flex-col justify-end p-6'>
-        <section className='h-1/2 w-full'></section>
-        <section className='h-1/2'>
-          <p className='text-3xl text-white font-bold'>{oneNewsData.title} </p>
+        {/* <section className='h-1/2 w-full'></section> */}
+        <section className='h-full overflow-hidden flex items-end'>
+          <h1 className='text-2xl text-white font-semibold p-'>
+            {oneNewsData.title}{' '}
+          </h1>
         </section>
       </section>
     </article>
   );
 };
 
-export default NewsImage;
+export default EachNews;

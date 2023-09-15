@@ -1,23 +1,11 @@
-import Image from 'next/image';
-import NewsImagesSlider from './components/newsImageSlider/NewsImagesSlider';
-import newsData from './components/newsImageSlider/data';
-import NewsImage from './components/newsImage.tsx/newsImage';
+import HeroSection from './components/HeroSection';
+import NewsFeed from './components/NewsFeed';
 
 export default function Home() {
   return (
     <main className='px-6 mx-auto'>
-      <p className='mt-12 mb-12 text-3xl text-center dark:text-white'>
-        Hello&nbsp;
-        <span className='whitespace-nowrap'>
-          I am <span className='font-bold'>Mahmoud</span>
-        </span>
-      </p>
-      <section className='w-5/6 flex flex-wrap items-center justify-evenly mx-auto'>
-        <NewsImagesSlider />
-        {newsData.map((oneNews) => (
-          <NewsImage key={oneNews.image} oneNewsData={oneNews} />
-        ))}
-      </section>
+      <HeroSection />
+      <NewsFeed />
     </main>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     //   <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
