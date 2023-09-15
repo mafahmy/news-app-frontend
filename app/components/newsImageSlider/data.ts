@@ -13,7 +13,7 @@ const newsData = [
   {
     id: '3',
     title: '😺😺 Dezo is a nice male cat 😺😺',
-    image: '/images/th.jpg',
+    image: '/images/dezo.jpg',
   },
   {
     id: '4',
