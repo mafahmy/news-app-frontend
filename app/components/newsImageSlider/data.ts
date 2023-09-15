@@ -2,34 +2,33 @@ import image from './images/option3.jpg';
 const newsData = [
   {
     id: '1',
-    title: 'hello I am full stack developer working hard',
+    title: 'hello I am full stack developer',
     image: '/images/option3.jpg',
   },
   {
     id: '2',
-    title: 'It will turn to be a nice news app',
+    title: '😜😜 It turned to be a nice Slider 😜😜',
     image: '/images/option1.jpg',
   },
   {
     id: '3',
-    title:
-      'hello I am full stack developer working hard,dezo is a nice male cat',
-    image: '/images/option2.jpg',
+    title: '😺😺 Dezo is a nice male cat 😺😺',
+    image: '/images/th.jpg',
   },
   {
     id: '4',
-    title: 'hello I am full stack developer working hard',
-    image: '/images/option3.jpg',
+    title: '😍❤️ I am using custom hook ❤️😍',
+    image: '/images/OI.jpg',
   },
   {
     id: '5',
-    title: 'hello I am full stack developer working hard',
-    image: '/images/option3.jpg',
+    title: '🚀🚀 Great coding practices 🚀🚀',
+    image: '/images/OIP.jpg',
   },
   {
     id: '6',
-    title: 'hello I am full stack developer working hard',
-    image: '/images/option3.jpg',
+    title: '👌👌I am working hard👌👌',
+    image: '/images/th.jpg',
   },
 ];
 export default newsData;

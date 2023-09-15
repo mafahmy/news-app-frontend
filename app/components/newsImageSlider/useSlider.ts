@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useSlider = (initialIndex: number, length: number) => {
+const useSlider = (initialIndex: number, length: number): SliderHook => {
   const [index, setIndex] = useState(initialIndex);
   const [touchDown, setTouchDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -24,7 +24,7 @@ const useSlider = (initialIndex: number, length: number) => {
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchDown(false);
   };
-  const hamdleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     const threshold = 5;
     if (touchDown) {
       if (e.touches[0].clientX < startX - threshold) {
@@ -39,7 +39,7 @@ const useSlider = (initialIndex: number, length: number) => {
     index,
     handleNextClick,
     handleBackClick,
-    hamdleTouchMove,
+    handleTouchMove,
     handleTouchEnd,
     handleTouchStart,
   ];
