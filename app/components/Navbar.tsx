@@ -43,7 +43,7 @@ const Navbar = () => {
       <section
         className={`absolute left-0 ${
           !mobileMenu ? 'hidden' : ''
-        } w-full mx-auto min-h-fit origin-top animate-open-menu flex-col justify-center bg-white text-2xl opacity-80 text-slate-500`}
+        } w-full mx-auto min-h-fit origin-top animate-open-menu flex-col justify-center bg-white text-2xl opacity-90 text-slate-700`}
         onClick={toggleMenu}
       >
         <nav
