@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className='bg-slate-700 p-1 min-w-[370px] mx-auto sticky top-0 drop-shadow-xl z-10 text-white'>
       <section className='mx-auto flex items-center justify-between p-3 md:justify-around'>
-        <h1 className='text-xl text-center font-medium sm:text-2xl md:text-3xl'>
+        <h1 className='text-xl w-max text-center font-medium sm:text-2xl md:text-3xl'>
           News App
         </h1>
         <>
