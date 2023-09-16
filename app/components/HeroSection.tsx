@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import NewsImagesSlider from './newsImageSlider/NewsImagesSlider';
 
 const HeroSection = () => {
   return (
     <>
-      <section className='my-12 flex mx-auto scroll-mt-40 flex-col items-center justify-center gap-8 p-6 sm:flex-row'>
-        <article className='sm:w-1/2 p-4'>
-          <h2 className='max-w-md text-center text-3xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-4xl'>
+      <section className='my-12 flex mx-auto flex-col items-center justify-center gap-8 p-6 sm:flex-row flex-wrap'>
+        <article className='min-w-[350px] sm:w-1/2 p-4'>
+          <h2 className='max-w-md w-full text-center text-3xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-4xl'>
             We Boldly Go
             <span className='text-indigo-700 dark:text-indigo-300'>
               {' Where No Rocket '}
@@ -20,18 +21,8 @@ const HeroSection = () => {
             Think Acme Rockets.
           </p>
         </article>
-
-        <div
-          style={{
-            width: '300px',
-            height: '320px',
-            backgroundColor: '#ddd',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <p>Ad placeholder</p>
+        <div className='p-3 bg-slate-500 rounded-3xl shadow-2xl'>
+          <NewsImagesSlider />
         </div>
       </section>
       <hr className='mx-auto w-1/2 bg-black dark:bg-white' />
