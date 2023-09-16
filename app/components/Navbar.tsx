@@ -13,9 +13,11 @@ const Navbar = () => {
     setMobileMenu(!mobileMenu);
   };
   return (
-    <header className='bg-slate-600 p-3 min-w-[370px] mx-auto sticky top-0 drop-shadow-xl z-10 text-white'>
+    <header className='bg-slate-700 p-1 min-w-[370px] mx-auto sticky top-0 drop-shadow-xl z-10 text-white'>
       <section className='mx-auto flex items-center justify-between p-3 md:justify-around'>
-        <h1 className='text-3xl text-center font-medium'>News App</h1>
+        <h1 className='text-xl text-center font-medium sm:text-2xl md:text-3xl'>
+          News App
+        </h1>
         <>
           <button
             className={`relative h-8 w-8 cursor-pointer text-3xl ${
@@ -39,9 +41,9 @@ const Navbar = () => {
         </nav>
       </section>
       <section
-        className={`left-0 ${
+        className={`absolute left-0 ${
           !mobileMenu ? 'hidden' : ''
-        } w-full mx-auto min-h-fit origin-top animate-open-menu flex-col justify-center bg-white text-2xl opacity-95 text-slate-500`}
+        } w-full mx-auto min-h-fit origin-top animate-open-menu flex-col justify-center bg-white text-2xl opacity-80 text-slate-500`}
         onClick={toggleMenu}
       >
         <nav
