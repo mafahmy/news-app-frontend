@@ -4,8 +4,10 @@ import NewsImagesSlider from './newsImageSlider/NewsImagesSlider';
 const HeroSection = () => {
   return (
     <>
-      <section className='my-12 flex mx-auto flex-col items-center justify-center gap-8 p-6 sm:flex-row flex-wrap'>
-        <article className='min-w-[350px] sm:w-1/2 p-4'>
+      <section className='h-20'></section>
+      <section className='flex mx-auto flex-wrap justify-center gap-5 items-center md:max-w-[90%]'>
+        {/* <section className='my-12 flex mx-auto flex-col items-center justify-center gap-8 p-6 sm:flex-row flex-wrap'> */}
+        <article className='min-w-[250px] sm:w-1/2 p-4'>
           <h2 className='max-w-md w-full text-center text-3xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-4xl'>
             We Boldly Go
             <span className='text-indigo-700 dark:text-indigo-300'>
@@ -21,10 +23,11 @@ const HeroSection = () => {
             Think Acme Rockets.
           </p>
         </article>
-        <div className='p-3 bg-slate-500 rounded-3xl shadow-2xl'>
+        <div className='p-3 bg-gray rounded-3xl shadow-2xl'>
           <NewsImagesSlider />
         </div>
       </section>
+      <section className='h-20'></section>
       <hr className='mx-auto w-1/2 bg-black dark:bg-white' />
     </>
   );

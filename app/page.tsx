@@ -3,7 +3,7 @@ import NewsFeed from './components/NewsFeed';
 
 export default function Home() {
   return (
-    <main className='px-6 mx-auto'>
+    <main className=''>
       <HeroSection />
       <NewsFeed />
     </main>
