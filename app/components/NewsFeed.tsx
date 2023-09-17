@@ -1,6 +1,6 @@
 import NewsImage from './eachNews/EachNews';
 import NewsImagesSlider from './newsImageSlider/NewsImagesSlider';
-import newsData from './newsImageSlider/data';
+import testingNewsData from './testingNewsData';
 
 const NewsFeed = () => {
   return (
@@ -12,9 +12,9 @@ const NewsFeed = () => {
         <hr className='h-10'></hr>
         <div className='flex flex-wrap justify-around gap-6'>
           {/* <NewsImagesSlider /> */}
-          {newsData.map((oneNews, index) => (
+          {testingNewsData.map((oneNews, index) => (
             <>
-              <NewsImage key={oneNews.image} oneNewsData={oneNews} />
+              <NewsImage key={oneNews.title} oneNewsData={oneNews} />
 
               <div
                 style={{

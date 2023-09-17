@@ -20,6 +20,7 @@ interface Props {
   handleTouchStart: (e: React.TouchEvent<HTMLDivElement>) => void;
   handleTouchEnd: (e: React.TouchEvent<HTMLDivElement>) => void;
   handleTouchMove: (e: React.TouchEvent<HTMLDivElement>) => void;
+  latestNewsData: OneNews[];
 }
 
 /**
@@ -30,6 +31,7 @@ interface Props {
  */
 const NewsImageSlide = ({
   index,
+  latestNewsData,
   handleNextClick,
   handleBackClick,
   handleTouchEnd,
@@ -40,7 +42,7 @@ const NewsImageSlide = ({
     <article
       className='relative min-w-[300px] flex items-end justify-center rounded-xl sm:min-w-[612px] sm:max-w-[612px] group'
       style={{
-        backgroundImage: `linear-gradient(160deg, rgba(56,56,56,0), rgba(56,56,56,1)),url(${newsData[index].image})`,
+        backgroundImage: `linear-gradient(160deg, rgba(56,56,56,0), rgba(56,56,56,1)),url(${latestNewsData[index].image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '320px',
@@ -53,7 +55,7 @@ const NewsImageSlide = ({
         <section className='h-1/2 w-full'></section>
         <section className='h-1/2'>
           <h1 className='text-2xl text-white font-semibold'>
-            {newsData[index].title}{' '}
+            {latestNewsData[index].title}{' '}
           </h1>
         </section>
         <SliderDots index={index} /> {/* Display slider dots */}
