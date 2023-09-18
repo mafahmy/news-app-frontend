@@ -4,6 +4,8 @@ interface Props {
     newId: string;
   };
 }
+
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 const oneNews = {
   title: 'Stocks making the biggest moves premarket: DASH, ARM, PYPL',
   description:
