@@ -3,6 +3,10 @@ import NewsImagesSlider from './newsImageSlider/NewsImagesSlider';
 import testingNewsData from './testingNewsData';
 
 const NewsFeed = () => {
+  const sortedTestingNewsData = testingNewsData.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
   return (
     <section className='flex flex-wrap flex-col items-center mx-auto'>
       <div className='p-6 bg-gradient-to-br shadow-2xl rounded-xl flex flex-col items-center gap-5'>
@@ -12,7 +16,7 @@ const NewsFeed = () => {
         <hr className='h-10'></hr>
         <div className='flex flex-wrap justify-around gap-6'>
           {/* <NewsImagesSlider /> */}
-          {testingNewsData.map((oneNews, index) => (
+          {sortedTestingNewsData.map((oneNews, index) => (
             <>
               <NewsImage key={oneNews.title} oneNewsData={oneNews} />
 

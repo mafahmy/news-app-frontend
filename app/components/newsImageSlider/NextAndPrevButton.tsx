@@ -21,7 +21,7 @@ interface Props {
  */
 const NextAndPrevButton = ({ handleNextClick, handleBackClick }: Props) => {
   return (
-    <div className='w-full flex justify-between items-center absolute top-0 bottom-0 left-0 text-4xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
+    <div className='hidden w-full justify-between items-center absolute top-0 bottom-0 left-0 text-4xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 sm:flex'>
       {/* Back button */}
       <button className='py-2' onClick={handleBackClick}>
         <AiFillCaretLeft />

@@ -1,0 +1,115 @@
+/* styles.css */
+.animation_btn {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.animation_btn div {
+  position: absolute;
+  top: 1rem;
+  margin-top: -1px;
+  height: 2px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+/* }
+
+.animation_btn div::before,
+.animation_btn div::after {
+  content: "";
+  left: 0;
+  top: 0rem;
+  position: absolute;
+  height: 2px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+} */
+.animation_btn div::before {
+  content: '';
+  left: 0;
+  top: -0.75rem;
+  position: absolute;
+  height: 2px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+.animation_btn div::after {
+  content: '';
+  left: 0;
+  top: 0.75rem;
+  position: absolute;
+  height: 2px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+.toggle-btn > div::after {
+  transform: translateY(-12px) rotate(-45deg);
+  /* transform: translateX(16px); */
+}
+.toggle-btn > div::before {
+  transform: translateY(12px) rotate(45deg);
+  /* transform: translateX(-16px);
+  transform: translateY(-12px); */
+
+
+}
+.toggle-btn > div {
+  background-color: transparent;
+  transform: rotate(720deg);
+}
+
+/* .animation_btn div::before {
+  transform: translateX(-16px);
+  transform: translateY(-12px);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
+} */
+/*
+.animation_btn div::after {
+  transform: translateY(3rem);
+}
+
+.animation_btn.toggle-btn div::before,
+.animation_btn.toggle-btn div::after {
+  transform: translateX(-4rem);
+} */
+
+/* .animation_.animation_btn {
+    height: 2rem;
+    width: 2rem;
+    position: absolute; 
+    top: 1rem; 
+    margin-top: 0.125rem;
+    height: 0.125rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms; 
+    background-color: red;
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)); 
+  } */

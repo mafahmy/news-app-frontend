@@ -52,9 +52,9 @@ const NewsImageSlide = ({
       onTouchEnd={handleTouchEnd} // Handle touch end events
     >
       <section className='h-2/3 flex flex-col justify-end p-6'>
-        <section className='h-1/2 w-full'></section>
-        <section className='h-1/2'>
-          <h1 className='text-2xl text-white font-semibold'>
+        <section className='h-1/3 w-full'></section>
+        <section className='h-2/3'>
+          <h1 className='text-white text-xl font-semibold sm:text-2xl'>
             {latestNewsData[index].title}{' '}
           </h1>
         </section>

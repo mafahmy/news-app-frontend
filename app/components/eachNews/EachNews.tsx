@@ -24,7 +24,7 @@ const EachNews = ({ oneNewsData }: Props) => {
       <section className='h-2/3 flex flex-col justify-end p-6'>
         {/* <section className='h-1/2 w-full'></section> */}
         <section className='h-full overflow-hidden flex items-end'>
-          <h1 className='text-2xl text-white font-semibold p-1'>
+          <h1 className='text-lg text-white font-semibold p-1'>
             {oneNewsData.title}{' '}
           </h1>
         </section>
