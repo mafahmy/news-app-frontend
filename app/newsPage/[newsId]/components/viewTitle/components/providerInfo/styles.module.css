@@ -1,0 +1,14 @@
+.provider_info {
+    display: flex;
+}
+.provider_info_wrapper {
+    margin: 0px;
+}
+.provider_logo_name {
+    cursor: pointer;
+    pointer-events: all;
+}
+.provider_info_wrapper, .provider_logo_name, .provider_logo_name a {
+    display: flex;
+    align-items: center;
+}

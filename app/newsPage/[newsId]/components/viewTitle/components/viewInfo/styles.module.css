@@ -1,0 +1,16 @@
+.viewInfo {
+    width: 100%;
+}
+.viewTitle {
+    margin: 0;
+}
+.viewTitle h1 {
+    text-align: start;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 12px;
+    line-height: 40px;
+    max-height: 160px;
+    overflow: hidden
+    ;
+}

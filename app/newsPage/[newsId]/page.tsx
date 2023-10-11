@@ -1,12 +1,15 @@
 import React from 'react';
+import styles from './styles.module.css';
+import Header from './components/header/Header';
+import ImageContainer from './components/imageContainer/ImageContainer';
 interface Props {
   params: {
     newId: string;
   };
 }
 
-export const runtime = 'edge' // 'nodejs' (default) | 'edge'
-const oneNews = {
+export const runtime = 'edge'; // 'nodejs' (default) | 'edge'
+const oneNewsInfo = {
   title: 'Stocks making the biggest moves premarket: DASH, ARM, PYPL',
   description:
     'These are the stocks making headlines in premarket trading Monday.',
@@ -25,13 +28,12 @@ const oneNews = {
 const NewsPage = async ({ params }: Props) => {
   return (
     <section>
-      <header>
-        <section></section>
-        <section></section>
-      </header>
-      <main>
-        <section></section>
-      </main>
+      <section className={styles.article_page_grid_layout}>
+        <article className={styles.article_page_gridarea_article}>
+          <Header oneNewsInfo={oneNewsInfo} />
+          <ImageContainer oneNewsInfo={oneNewsInfo} />
+        </article>
+      </section>
     </section>
   );
 };
