@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import Header from './components/header/Header';
 import ImageContainer from './components/imageContainer/ImageContainer';
+import ArticleContent from './components/articleContent/ArticleContent';
 interface Props {
   params: {
     newId: string;
@@ -32,6 +33,7 @@ const NewsPage = async ({ params }: Props) => {
         <article className={styles.article_page_gridarea_article}>
           <Header oneNewsInfo={oneNewsInfo} />
           <ImageContainer oneNewsInfo={oneNewsInfo} />
+          <ArticleContent oneNewsInfo={oneNewsInfo} />
         </article>
       </section>
     </section>
