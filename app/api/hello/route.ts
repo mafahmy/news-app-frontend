@@ -58,6 +58,13 @@ export async function GET() {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
     console.log('DATA WITH OUT DUPLICATE COUNT: ', removedDuplicate.length);
+    // const removedDuplicateWithAddedId = removedDuplicate.map((oneNews) => {
+    //   return {
+    //     ...oneNews,
+    //     id: Math.floor((1 + Math.random()) * 0x100000).toString(16),
+    //   };
+    // });
+    // console.log(removedDuplicateWithAddedId);
     const updatedDataString = JSON.stringify(removedDuplicate);
 
     if (updatedDataString) {
