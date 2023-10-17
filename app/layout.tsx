@@ -20,13 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className=''>
+      <body className='flex flex-col min-h-screen'>
         <GoogleAnalytics
           GA_TRACKING_ID={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
 
         <Navbar />
-        {children}
+        <div className='flex-grow'>{children}</div>
+
         <Footer />
       </body>
     </html>

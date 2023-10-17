@@ -9,6 +9,7 @@
 .article_page_gridarea_article {
     grid-area: article;
     position: relative;
+    padding: 10px;
 }
 @media screen and (max-width: 599px) {
     .article_page_grid_layout {

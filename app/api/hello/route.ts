@@ -2,38 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { NextResponse } from 'next/server';
 
-/*export async function GET() {
-  try {
-    const response = await fetch('http://localhost:3131/api-news', {
-      cache: 'no-store',
-    });
-
-    const latestNews = await response.json();
-    const filePath = path.join(process.cwd(), 'public/data/testingNewsData.json');
-
-    const existingDataString = await fs.readFileSync(filePath, 'utf8');
-    let existingData = JSON.parse(existingDataString);
-
-    existingData = [...existingData, ...latestNews];
-
-    const removedDuplicate = filterDuplicate(existingData).sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
-
-    const updatedDataString = JSON.stringify(removedDuplicate);
-
-    if (updatedDataString) {
-      await fs.writeFile(filePath, updatedDataString);
-      console.log('created file');
-    }
-
-    return new NextResponse('New data is written to file');
-  } catch (error) {
-    console.error(`Error occurred: ${error}`);
-  }
-}*/
-
 export async function GET() {
   try {
     const response = await fetch('http://localhost:3131/api-news', {
@@ -58,13 +26,7 @@ export async function GET() {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
     console.log('DATA WITH OUT DUPLICATE COUNT: ', removedDuplicate.length);
-    // const removedDuplicateWithAddedId = removedDuplicate.map((oneNews) => {
-    //   return {
-    //     ...oneNews,
-    //     id: Math.floor((1 + Math.random()) * 0x100000).toString(16),
-    //   };
-    // });
-    // console.log(removedDuplicateWithAddedId);
+
     const updatedDataString = JSON.stringify(removedDuplicate);
 
     if (updatedDataString) {
@@ -93,13 +55,6 @@ const filterDuplicate = (newsArray: OneNews[]) => {
     }
   });
 };
-// const filterDuplicate = (newsArray: OneNews[]) => {
-//   const filteredArray = newsArray.filter(
-//     (oneNews, index, array) =>
-//       index === array.map((eachNews) => eachNews.title).indexOf(oneNews.title)
-//   );
-//   return filteredArray;
-// };
 
 const readData = (filePath: string): Promise<string> => {
   return new Promise((resolve, reject) => {

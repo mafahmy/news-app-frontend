@@ -29,7 +29,7 @@ const Navbar = () => {
     setMenuState(menuState === 'closed' ? 'opened' : 'closing');
   };
   return (
-    <header className='bg-slate-700 p-1 min-w-[370px] mx-auto sticky top-0 drop-shadow-xl z-10 text-white'>
+    <header className='bg-slate-700 p-1 min-w-full mx-auto sticky top-0 drop-shadow-xl z-10 text-white'>
       <section className='mx-auto flex items-center justify-between p-3 md:justify-around'>
         <h1 className='text-xl w-max whitespace-nowrap text-center font-medium sm:text-2xl md:text-3xl'>
           <Link href='/'>News Rocket</Link>
